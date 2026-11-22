@@ -1,0 +1,24 @@
+Zepto Inventory & Pricing Analysis — Business Insights
+
+1. Premium Pricing & Discounts
+Borges Extra Light Olive Oil had the highest MRP of ₹2,600, reduced to ₹1,399, offering a saving of ₹1,201.
+
+2. Category Discount Patterns
+Fruits & Vegetables had the highest average discount (15.46%), while Home & Cleaning had the lowest (5.68%).
+
+3. Inventory Distribution
+Cooking Essentials and Munchies had the highest recorded inventory quantity of 2,179 each, while Meats, Fish & Eggs had the lowest at 152.
+
+4. Out-of-Stock Products
+Cooking Essentials and Munchies had 64 out-of-stock records each. However, raw counts alone cannot determine which category has the worst availability.
+
+5. Inventory Value
+Cooking Essentials and Munchies had the highest estimated inventory value of ₹3,37,131 each, calculated using discounted selling price and available quantity.
+
+6. Product Listings by Category
+Cooking Essentials and Munchies had the highest number of records (512 each), while Meats, Fish & Eggs had the lowest (63).
+
+7. Bulk Products
+The heaviest products were 10 kg atta packs, including Ashirwad and Pillsbury products.
+
+Data Limitation: Some product names and records appear across multiple categories. Therefore, category-level totals may include repeated listings and should not be treated as unique product counts or actual business totals.

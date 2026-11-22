@@ -1,0 +1,25 @@
+Query 7 — Finding Products with the Highest Available Stock
+
+Business question:
+Which products have the highest available stock quantity?
+
+How we approached the problem:
+We selected product names, categories, and available quantities. We sorted the available quantities in descending order and displayed the top 10 records.
+
+SQL concepts used:
+- SELECT — selected product details.
+- ORDER BY — sorted stock quantities.
+- DESC — arranged quantities from highest to lowest.
+- LIMIT — displayed the top 10 records.
+
+Query:sql
+SELECT name, Category, availableQuantity
+FROM zepto_analysis.zepto_v2
+ORDER BY availableQuantity DESC
+LIMIT 10;
+
+What the query solved:
+Identified products with the highest available quantities.
+
+What we found:
+The maximum available quantity in the dataset was 6. Several products shared this quantity, with Home & Cleaning appearing frequently in the top results.

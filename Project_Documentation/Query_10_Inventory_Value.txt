@@ -1,0 +1,27 @@
+Query 10 — Estimating Inventory Value by Category
+
+Business question:
+What is the estimated value of available inventory in each category?
+
+How we approached the problem:
+We multiplied the discounted selling price of each product by its available quantity to estimate the inventory value. We summed these values category-wise, converted prices from paise to rupees by dividing by 100, rounded the result to two decimal places, and sorted categories by estimated inventory value.
+
+SQL concepts used:
+- SELECT — selected categories and calculated inventory value.
+- SUM() — calculated total inventory value.
+- ROUND() — rounded values.
+- GROUP BY — grouped inventory value by category.
+- ORDER BY — sorted the calculated values.
+
+Query:sql
+SELECT Category,
+ROUND(SUM(discountedSellingPrice * availableQuantity) / 100, 2) AS inventory_value
+FROM zepto_analysis.zepto_v2
+GROUP BY Category
+ORDER BY inventory_value DESC;
+
+What the query solved:
+Estimated the value of available inventory based on discounted selling prices.
+
+What we found:
+Cooking Essentials and Munchies had the highest estimated inventory value at ₹337,131 each. Fruits & Vegetables had the lowest at ₹10,846.

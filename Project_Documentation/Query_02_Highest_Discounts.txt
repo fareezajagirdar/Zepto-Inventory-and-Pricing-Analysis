@@ -1,0 +1,25 @@
+Query 2 — Finding Products with the Highest Discount Percentage
+
+Business question:  
+Which products are offering the highest discount percentages?
+
+How we approached the problem:  
+After examining product prices, we wanted to understand which products were receiving the biggest percentage discounts. We identified the `discountPercent` column as the relevant field. We sorted the records from highest to lowest discount percentage to bring the most heavily discounted products to the top. Since we only needed the leading products, we limited the output to 10 records.
+
+SQL concepts used:
+- `SELECT` — to retrieve product details and discount percentages.
+- `ORDER BY` — to rank products based on discount.
+- `DESC` — to sort discounts from highest to lowest.
+- `LIMIT 10` — to display the top 10 records.
+
+Query:sql
+SELECT name, Category, mrp, discountPercent
+FROM zepto_analysis.zepto_v2
+ORDER BY discountPercent DESC
+LIMIT 10;
+
+What the query solved:  
+It helped identify products with the highest discount percentages, making it easier to examine promotional pricing.
+
+What we found:  
+Dukes Waffy products had the highest discount at 51%, while several other products offered discounts of 50%.

@@ -1,0 +1,27 @@
+Query 5 — Calculating Average Discounts by Category
+
+Business question:
+What is the average discount percentage offered in each category?
+
+How we approached the problem:
+We grouped products by category and calculated the average discount percentage for each group. We rounded the results to two decimal places and sorted the categories from highest to lowest average discount.
+
+SQL concepts used:
+- SELECT — selected category and average discount.
+- AVG() — calculated the average discount.
+- ROUND() — rounded values to two decimal places.
+- GROUP BY — grouped products by category.
+- ORDER BY — sorted average discounts.
+- DESC — arranged results in descending order.
+
+Query:sql
+SELECT Category, ROUND(AVG(discountPercent), 2) AS average_discount
+FROM zepto_analysis.zepto_v2
+GROUP BY Category
+ORDER BY average_discount DESC;
+
+What the query solved:
+Compared discount strategies across different product categories.
+
+What we found:
+Fruits & Vegetables had the highest average discount of 15.46%, while Home & Cleaning had the lowest at 5.68%.

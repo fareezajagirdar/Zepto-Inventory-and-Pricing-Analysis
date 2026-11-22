@@ -1,0 +1,26 @@
+Query 6 — Analyzing Inventory Quantity by Category
+
+Business question:
+Which categories have the highest total available inventory?
+
+How we approached the problem:
+We grouped products by category and summed their available quantities. We sorted the totals in descending order to identify categories with the largest recorded inventory.
+
+SQL concepts used:
+- SELECT — selected category and inventory quantity.
+- SUM() — calculated total available quantity.
+- GROUP BY — grouped inventory by category.
+- ORDER BY — sorted inventory totals.
+- DESC — arranged totals from highest to lowest.
+
+Query:sql
+SELECT Category, SUM(availableQuantity) AS total_inventory
+FROM zepto_analysis.zepto_v2
+GROUP BY Category
+ORDER BY total_inventory DESC;
+
+What the query solved:
+Compared the total recorded inventory quantities across categories.
+
+What we found:
+Cooking Essentials and Munchies had the highest total recorded inventory quantity of 2,179 each.

@@ -1,0 +1,28 @@
+Query 9 — Counting Out-of-Stock Products by Category
+
+Business question:
+Which categories have the highest number of out-of-stock products?
+
+How we approached the problem:
+We filtered the records to include only out-of-stock products. We grouped these records by category, counted the products in each group, and sorted the counts in descending order.
+
+SQL concepts used:
+- SELECT — selected category and out-of-stock count.
+- WHERE — filtered out-of-stock records.
+- COUNT() — counted records.
+- GROUP BY — grouped records by category.
+- ORDER BY — sorted the counts.
+- DESC — arranged results from highest to lowest.
+
+Query:sql
+SELECT Category, COUNT(*) AS out_of_stock_count
+FROM zepto_analysis.zepto_v2
+WHERE outOfStock = 'TRUE'
+GROUP BY Category
+ORDER BY out_of_stock_count DESC;
+
+What the query solved:
+Compared out-of-stock record counts across product categories.
+
+What we found:
+Cooking Essentials and Munchies had the highest out-of-stock counts with 64 records each. Fruits & Vegetables had the lowest count with 6 records.

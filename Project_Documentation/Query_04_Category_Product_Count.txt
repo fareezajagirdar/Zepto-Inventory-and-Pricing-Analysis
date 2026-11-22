@@ -1,0 +1,26 @@
+Query 4 — Counting Products in Each Category
+
+Business question:
+How many product records are present in each category?
+
+How we approached the problem:
+We grouped the records by category and counted the number of records in each group. We sorted the counts in descending order to identify categories with the highest number of product listings.
+
+SQL concepts used:
+- SELECT — selected category and count.
+- COUNT() — counted records.
+- GROUP BY — grouped records by category.
+- ORDER BY — sorted category counts.
+- DESC — arranged counts from highest to lowest.
+
+Query:sql
+SELECT Category, COUNT(*) AS product_count
+FROM zepto_analysis.zepto_v2
+GROUP BY Category
+ORDER BY product_count DESC;
+
+What the query solved:
+Compared the number of product listings across categories.
+
+What we found:
+Cooking Essentials and Munchies had the highest counts with 512 records each, while Meats, Fish & Eggs had the lowest count with 63 records.

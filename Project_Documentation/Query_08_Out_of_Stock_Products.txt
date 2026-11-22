@@ -1,0 +1,24 @@
+Query 8 — Identifying Out-of-Stock Products
+
+Business question:
+Which products are currently marked as out of stock?
+
+How we approached the problem:
+We selected the product name, category, available quantity, and stock status. We filtered the dataset to include only products whose outOfStock status was TRUE and displayed a sample of 10 records.
+
+SQL concepts used:
+- SELECT — selected product and stock details.
+- WHERE — filtered out-of-stock records.
+- LIMIT — displayed a sample of 10 records.
+
+Query:sql
+SELECT name, Category, availableQuantity, outOfStock
+FROM zepto_analysis.zepto_v2
+WHERE outOfStock = 'TRUE'
+LIMIT 10;
+
+What the query solved:
+Retrieved a sample of products that were unavailable for purchase.
+
+What we found:
+Out-of-stock products appeared across multiple categories, including Fruits & Vegetables and Cooking Essentials, with available quantity recorded as 0.

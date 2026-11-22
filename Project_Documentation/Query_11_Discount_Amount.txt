@@ -1,0 +1,27 @@
+Query 11 — Calculating Absolute Discount Amounts
+
+Business question:
+Which products offer the highest savings in rupees?
+
+How we approached the problem:
+We selected the product name, category, MRP, and discounted selling price. We calculated the absolute discount amount by subtracting the discounted selling price from the MRP. We sorted the calculated discount amounts in descending order and displayed the top 10 records.
+
+SQL concepts used:
+- SELECT — selected product and price details.
+- Arithmetic operator (-) — calculated the discount amount.
+- ORDER BY — sorted discount amounts.
+- DESC — arranged discounts from highest to lowest.
+- LIMIT — displayed the top 10 records.
+
+Query:sql
+SELECT name, Category, mrp, discountedSellingPrice,
+(mrp - discountedSellingPrice) AS discount_amount
+FROM zepto_analysis.zepto_v2
+ORDER BY discount_amount DESC
+LIMIT 10;
+
+What the query solved:
+Identified products offering the highest absolute price reductions.
+
+What we found:
+Borges Extra Light Olive Oil Bottle had the highest absolute discount amount of ₹1,201.

@@ -1,0 +1,26 @@
+      Query 1 — Finding the Most Expensive Products
+
+Business question:  
+Which products have the highest prices in the dataset?
+
+How we approached the problem:  
+We wanted to identify the most expensive products, so we first looked at the `mrp` column, which contains the product's maximum retail price. Since the dataset contained thousands of records, looking through all of them manually wouldn't be practical. We decided to sort the products by MRP in descending order so that the most expensive products would appear first.
+
+SQL concepts used:
+ `SELECT` — to retrieve the required columns.
+ `ORDER BY` — to sort products based on MRP.
+ `DESC` — to arrange prices from highest to lowest.
+ `LIMIT 10` — to display only the top 10 records.
+
+Query : sql
+SELECT name, Category, mrp
+FROM zepto_analysis.zepto_v2
+ORDER BY mrp DESC
+LIMIT 10;
+
+
+What the query solved:  
+It identified the 10 highest-priced product records, allowing us to examine premium-priced products without manually searching the entire dataset.
+
+What we found:  
+Borges Extra Light Olive Oil had the highest MRP at ₹2,600.

@@ -1,0 +1,25 @@
+Query 12 — Finding the Heaviest Products
+
+Business question:
+Which products have the highest weight in the dataset?
+
+How we approached the problem:
+We selected the product name, category, and weight in grams. We sorted the product weights in descending order and displayed the top 10 records.
+
+SQL concepts used:
+- SELECT — selected product details.
+- ORDER BY — sorted products by weight.
+- DESC — arranged weights from highest to lowest.
+- LIMIT — displayed the top 10 records.
+
+Query:sql
+SELECT name, Category, weightInGms
+FROM zepto_analysis.zepto_v2
+ORDER BY weightInGms DESC
+LIMIT 10;
+
+What the query solved:
+Identified products with the highest recorded weight.
+
+What we found:
+Aashirvaad Atta and Pillsbury Chakki Fresh Atta were among the heaviest products at 10,000 grams (10 kg).

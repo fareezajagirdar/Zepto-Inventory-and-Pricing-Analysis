@@ -1,0 +1,25 @@
+Query 3 — Finding Products with the Highest Discounted Selling Price
+
+Business question:  
+Which products have the highest selling prices after discounts?
+
+How we approached the problem:  
+After looking at the original MRP, we wanted to know which products remained the most expensive after discounts were applied. We used the `discountedSellingPrice` column because it represents the product's selling price after the discount. We sorted the values in descending order to bring the highest selling prices to the top and limited the results to 10 records for easier analysis.
+
+SQL concepts used:
+- `SELECT` — to retrieve product names, categories, and pricing details.
+- `ORDER BY` — to sort products based on their discounted selling price.
+- `DESC` — to arrange prices from highest to lowest.
+- `LIMIT 10` — to display the top 10 records.
+
+Query:sql
+SELECT name, Category, mrp, discountedSellingPrice
+FROM zepto_analysis.zepto_v2
+ORDER BY discountedSellingPrice DESC
+LIMIT 10;
+
+What the query solved:  
+It helped identify the products with the highest final selling prices, allowing us to examine which products remained expensive even after discounts.
+
+What we found:  
+Borges Extra Light Olive Oil remained the highest-priced product, with a selling price of ₹1,399 compared to its original MRP of ₹2,600.
